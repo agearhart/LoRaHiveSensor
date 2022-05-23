@@ -1,0 +1,7 @@
+{
+    "sketch": "LoRaHiveSensor.ino",
+    "output": "build",
+    "board": "arduino:avr:micro",
+    "programmer": "arduino:avrisp",
+    "port": "COM3"
+}
