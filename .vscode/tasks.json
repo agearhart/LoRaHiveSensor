@@ -4,9 +4,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "LoRaHive-Setup",
+            "label": "Setup",
             "type": "shell",
-            "command": "arduino-cli.exe core install arduino:avr",
+            "command": "arduino-cli.exe core install arduino:avr; arduino-cli.exe lib install \"DHT sensor library\"; arduino-cli.exe lib install ArduinoJson",
             "group": "none",
             "isBackground": false,
             "presentation": {
@@ -19,7 +19,7 @@
             "problemMatcher": []
         },
         {
-            "label": "LoRaHiveSensor",
+            "label": "Build",
             "type": "shell",
             "command": "arduino-cli compile -v -b arduino:avr:mini --library ${workspaceFolder}\\libraries\\RadioHead ${workspaceFolder}",
             "group": {
@@ -37,7 +37,7 @@
             "problemMatcher": []
         },
         {
-            "label": "LoRaHiveSensor-Test",
+            "label": "Test",
             "type": "shell",
             "command": "arduino-cli upload -p COM18 -v --fqbn arduino:avr:mini ${workspaceFolder}/LoRaHiveSensor.ino",
             "group": "test",
